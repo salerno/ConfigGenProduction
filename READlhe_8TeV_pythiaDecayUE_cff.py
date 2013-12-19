@@ -146,8 +146,8 @@ process.generator = cms.EDFilter("Pythia6HadronizerFilter",
 process.writer = cms.EDAnalyzer("HepMCEventWriter")
 
 # Path and EndPath definitions
-process.generation_step = cms.Path(process.pgen)
-process.simulation_step = cms.Path(process.psim)
+process.generation_step = cms.Path(process.generator)
+#process.simulation_step = cms.Path(process.psim)
 process.genfiltersummary_step = cms.EndPath(process.genFilterSummary)
 process.endjob_step = cms.EndPath(process.endOfProcess)
 process.outpath = cms.EndPath(process.writer)
